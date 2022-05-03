@@ -16,7 +16,7 @@ public class SQLUtil {
         return pstm;
     }
 
-    public boolean executeUpdate(String sql, Object... args) throws SQLException, ClassNotFoundException {
+    public static boolean executeUpdate(String sql, Object... args) throws SQLException, ClassNotFoundException {
         return getPreparedStatement(sql,args).executeUpdate() > 0;
     }
 
